@@ -3,14 +3,15 @@ import "../App.css"
 import Chip from "./Chip.jsx";
 import SocialLink from "./SocialLink.jsx";
 
-export default function LeftSide() {
+export default function LeftSide({ isMobile }) {
     return (
         <GlassCard customStyles={{
-            height: '90vh',
-            width: '30vw',
-            marginTop: 'auto',
-            marginBottom: 'auto',
-            marginLeft: '20px',
+            height: isMobile ? 'auto' : '90vh',
+            width: isMobile ? '90vw' : '30vw',
+            marginTop: isMobile ? '16px' : 'auto',
+            marginBottom: isMobile ? '16px' : 'auto',
+            marginLeft: isMobile ? 'auto' : '20px',
+            marginRight: isMobile ? 'auto' : undefined,
             paddingTop: '0px',
         }}>
             { /* Profile */}
@@ -75,7 +76,7 @@ export default function LeftSide() {
                 display: 'flex',
                 flexWrap: 'wrap',
                 gap: '12px',
-                justifyContent: 'space-evenly', // spreads them evenly
+                justifyContent: 'start', // spreads them evenly
                 alignContent: 'start',    // keeps rows tight
                 alignItems: 'center', // 👈 key part
                 marginTop: '12px'
