@@ -101,6 +101,37 @@ export default function LeftSide({isMobile}) {
                     ))}
                 </div>
             </GlassCard>
+
+
+            {/*    Embed GitHub Contributions*/}
+            <GlassCard customStyles={{
+                textAlign: "center",
+                borderRadius: "18px"
+            }}>
+                <h4 style={{
+                    fontSize: '22px',
+                    marginTop: '0',
+                    marginBottom: '16px',
+                    color: '#00fa9a',
+                    letterSpacing: '1px'
+                }}>GitHub Contributions</h4>
+                <div style={{
+                    borderRadius: "14px",
+                    display: "inline-block",
+                }}>
+                    <img
+                        src="https://ghchart.rshah.org/DaytimeDev"
+                        alt="GitHub Contributions Chart"
+                        style={{
+                            width: '100%',
+                            maxWidth: '500px',
+                            height: 'auto',
+                            borderRadius: '10px',
+                        }}
+                    />
+                </div>
+            </GlassCard>
+
         </div>
     )
 }

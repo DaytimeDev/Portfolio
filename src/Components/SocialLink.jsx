@@ -21,12 +21,25 @@ export default function SocialLink({platform, url, colour}) {
             style={{
                 background: `rgba(${hexToRgb(colour)}, 0.4)`,
                 backdropFilter: 'blur(8px)',
-                border: `2px solid ${colour}`,
                 display: 'inline-flex',
+                border: "2px solid #00fa9a00",
                 alignItems: 'center',
                 justifyContent: 'center',
                 borderRadius: '20px',
-            }}>
+            }}
+
+            onMouseOver={e => {
+                e.currentTarget.style.transition = 'background 1s, border 0.1s';
+                e.currentTarget.style.background = colour;
+                e.currentTarget.style.border = `2px solid ${colour}`;
+            }}
+
+            onMouseOut={e => {
+                e.currentTarget.style.transition = 'background 2s, border 0.5s';
+                e.currentTarget.style.background = `rgba(${hexToRgb(colour)}, 0.4)`;
+                e.currentTarget.style.border = '2px solid #00fa9a00';
+            }}
+        >
             <a
                 href={url}
                 target="_blank"
