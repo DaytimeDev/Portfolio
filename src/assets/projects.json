@@ -2,7 +2,7 @@
   {
     "name": "Project Blue",
     "category": "Roblox",
-    "description": "A multiplayer future style game, message me to learn more!. It has car systems, weapons, cash systems and much more!",
+    "description": "A multiplayer future style game, message me to learn more!. It has car systems, weapons, cash systems and much more! This is my most recent project after many roblox programs before",
     "link": "",
     "image": "projects/Map.png",
     "badges": [
@@ -99,6 +99,19 @@
       "Java",
       "JavaScript",
       "Discord"
+    ]
+  },
+  {
+    "name": "Costly Browsing",
+    "category": "Other",
+    "description": "A chrome extension made for fun, where the internet is locked away, and you unlock parts of it by earning coins",
+    "link": "https://github.com/DaytimeDev/CostlyBrowsing",
+    "image": "projects/Extension.png",
+    "badges": [
+      "JavaScript",
+      "YouTube",
+      "Chrome",
+      "Fun"
     ]
   }
 ]
