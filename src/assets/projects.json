@@ -4,41 +4,101 @@
     "category": "Roblox",
     "description": "A multiplayer future style game, message me to learn more!. It has car systems, weapons, cash systems and much more!",
     "link": "",
-    "image": "src/assets/projects/Map.png"
+    "image": "projects/Map.png",
+    "badges": [
+      "Roblox",
+      "Multiplayer",
+      "Cars",
+      "Weapons"
+    ]
   },
   {
     "name": "Self Driving Car",
     "category": "Roblox",
     "description": "Worked on a self driving car, which works using mathmatics and code to drive around and navigate, a work in progress.",
     "link": "",
-    "image": "src/assets/projects/Self.png"
+    "image": "projects/Self.png",
+    "badges": [
+      "Roblox",
+      "AI",
+      "Self-Driving",
+      "WIP"
+    ]
   },
   {
     "name": "NEAT System - Evolving AI",
     "category": "AI",
     "description": "Written in a few languages, I build a neural network that can solve problems, like the XOR problem, a common tasks for AI's to solve",
     "link": "",
-    "image": "src/assets/projects/NN.png"
+    "image": "projects/NN.png",
+    "badges": [
+      "AI",
+      "NEAT",
+      "Multi-language"
+    ]
   },
   {
     "name": "Portfolio Website",
     "category": "Websites",
-    "description": "Fun fact, this website you are looking at was written by me in react!",
+    "description": "Fun fact, this website you are looking at was written by me in react! I honestly quite like the feel that this site gives off.",
     "link": "",
-    "image": ""
+    "image": "",
+    "badges": [
+      "React",
+      "Design",
+      "Portfolio"
+    ]
+  },
+  {
+    "name": "Horizon Website",
+    "category": "Websites",
+    "description": "A react website I made a few years ago where we would make roblox products for people",
+    "link": "",
+    "image": "",
+    "badges": [
+      "React",
+      "Design",
+      "Roblox",
+      "Discord"
+    ]
   },
   {
     "name": "GitWrist",
     "category": "Apps",
     "description": "An app where you can access GitHub on your wrist, made for smart watches. (WearOS).",
     "link": "https://github.com/DaytimeDev/GitWrist",
-    "image": "src/assets/projects/GitWrist.png"
+    "image": "projects/GitWrist.png",
+    "badges": [
+      "WearOS",
+      "GitHub",
+      "Android",
+      "Kotlin"
+    ]
   },
   {
     "name": "My Circle",
     "category": "Apps",
     "description": "An android app which is like a safety app, for days out, it's a work in progress",
     "link": "",
-    "image": "src/assets/projects/CirclePreview.png"
+    "image": "projects/CirclePreview.png",
+    "badges": [
+      "Android",
+      "Safety",
+      "WIP",
+      "Kotlin"
+    ]
+  },
+  {
+    "name": "Colony Craft",
+    "category": "Other",
+    "description": "A minecraft server based around colonies, I helped out with a few bits of programming. But my main role was building and mainting the discord bot",
+    "link": "https://discord.gg/umbuCMUvWM",
+    "image": "projects/Discord.png",
+    "badges": [
+      "Minecraft",
+      "Java",
+      "JavaScript",
+      "Discord"
+    ]
   }
 ]

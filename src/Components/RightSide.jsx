@@ -5,7 +5,7 @@ import projects from "../assets/projects.json";
 import ProjectCard from "./ProjectCard.jsx";
 
 export default function RightSide() {
-    const [selected, setSelected] = useState("AI");
+    const [selected, setSelected] = useState("Roblox");
     const chips = ['Roblox', 'AI', 'Websites', 'Apps', "Other"];
 
     const filteredProjects = selected
@@ -47,10 +47,11 @@ export default function RightSide() {
             <div style={{
                 marginTop: '32px',
                 display: 'grid',
-                gridTemplateColumns: '1fr 1fr',
+                gridTemplateColumns: '1fr 1fr 1fr',
                 gap: '32px',
-                height: '60vh',
-                overflowY: 'auto'
+                height: '100%',
+                overflowY: 'auto',
+                marginBottom: '0px',
             }}>
                 {filteredProjects.map((project, idx) => (
                     <ProjectCard
@@ -59,6 +60,7 @@ export default function RightSide() {
                         description={project.description}
                         link={project.link ?? undefined}
                         image={project.image ?? undefined}
+                        badges={project.badges ?? []}
                         delay={idx * 0.15} // 0.15s delay between cards
                     />
                 ))}

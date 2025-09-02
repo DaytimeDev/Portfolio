@@ -23,7 +23,7 @@ export default function LeftSide() {
                 marginRight: 'auto',
                 padding: '24px 0',
             }}>
-                <img src={"src/assets/LogoFixed.png"} alt={"Profile"} style={{
+                <img src={"/LogoFixed.png"} alt={"Profile"} style={{
                     width: '120px',
                     height: '120px',
                     borderRadius: '25%',
