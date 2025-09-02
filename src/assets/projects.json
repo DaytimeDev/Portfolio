@@ -1,0 +1,44 @@
+[
+  {
+    "name": "Project Blue",
+    "category": "Roblox",
+    "description": "A multiplayer future style game, message me to learn more!.",
+    "link": "https://www.roblox.com/games/roblox-game",
+    "image": "https://example.com/project-blue.png"
+  },
+  {
+    "name": "Self Driving Car",
+    "category": "Roblox",
+    "description": "Worked on a self driving car, which works using mathmatics and code to drive around and navigate, a work in progress.",
+    "link": "",
+    "image": "https://example.com/self-driving-car.png"
+  },
+  {
+    "name": "NEAT System - Evolving AI",
+    "category": "AI",
+    "description": "Written in a few languages, I build a neural network that can solve problems, like the XOR problem, a common tasks for AI's to solve",
+    "link": "",
+    "image": "src/assets/projects/NN.png"
+  },
+  {
+    "name": "Portfolio Website",
+    "category": "Websites",
+    "description": "Fun fact, this website you are looking at was written by me in react!",
+    "link": "",
+    "image": ""
+  },
+  {
+    "name": "GitWrist",
+    "category": "Apps",
+    "description": "An app where you can access GitHub on your wrist, made for smart watches. (WearOS).",
+    "link": "https://github.com/DaytimeDev/GitWrist",
+    "image": "src/assets/projects/GitWrist.png"
+  },
+  {
+    "name": "My Circle",
+    "category": "Apps",
+    "description": "An android app which is like a safety app, for days out, it's a work in progress",
+    "link": "",
+    "image": "src/assets/projects/CirclePreview.png"
+  }
+]
