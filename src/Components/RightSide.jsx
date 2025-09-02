@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import GlassCard from "./GlassCard.jsx";
 import Chip from "./Chip.jsx";
 import projects from "../assets/projects.json";
@@ -13,7 +13,7 @@ export default function RightSide({isMobile}) {
         },
         {
             category: "AI",
-            note: "This is something I've only just started working with, NEAT algorithms and mathmatical evolution, so theres only so much here"
+            note: "This is something I've only just started working with, NEAT algorithms and mathmatical evolution, so theres only so much here; and also building these is a nightmare"
         },
         {
             category: "Websites",
@@ -121,7 +121,7 @@ export default function RightSide({isMobile}) {
                             style={{
                                 margin: '8px',
                                 fontSize: isMobile ? '12px' : '14px',
-                                color: '#ffdd80', // softer yellow, less eye-catching
+                                color: '#80ffac', // softer yellow, less eye-catching
                                 textAlign: 'center',
                                 whiteSpace: 'pre-wrap',
                                 transition: 'color 0.3s ease',
