@@ -16,6 +16,7 @@ body {
     min-width: 320px;
     min-height: 100vh;
     font-family: "Silkscreen", sans-serif;
+    background: url("/BackgroundForPortfolio.svg") no-repeat center center fixed;
 }
 
 h1 {
