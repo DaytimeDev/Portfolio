@@ -1,9 +1,11 @@
+import React from "react";
 import GlassCard from "./GlassCard.jsx";
 import "../App.css"
 import Chip from "./Chip.jsx";
 import SocialLink from "./SocialLink.jsx";
 
-export default function LeftSide({ isMobile }) {
+export default function LeftSide({isMobile}) {
+
     return (
         <div style={{
             display: "flex",
@@ -49,11 +51,11 @@ export default function LeftSide({ isMobile }) {
 
             {/* Socials */}
             <GlassCard customStyles={{
-                padding: "12px",
                 display: "flex",
                 justifyContent: "space-evenly",
                 alignItems: "center",
                 gap: "12px",
+                width: "fit-content"
             }}>
                 <SocialLink colour={"#2200ff"} platform={"Discord"}
                             url={"https://discord.com/users/562685530790428692"}/>
@@ -63,7 +65,7 @@ export default function LeftSide({ isMobile }) {
             </GlassCard>
 
             {/* Skills */}
-            <GlassCard customStyles={{ padding: "16px" }}>
+            <GlassCard customStyles={{padding: "16px"}}>
                 <h2 style={{
                     textAlign: 'center',
                     fontSize: '24px',
@@ -78,16 +80,25 @@ export default function LeftSide({ isMobile }) {
                     alignContent: 'start',
                     alignItems: 'center',
                 }}>
-                    <Chip label="Programming" fontSize="1.5rem"/>
-                    <Chip label="Design" fontSize="1rem"/>
-                    <Chip label="Teamwork" fontSize="1.2rem"/>
-                    <Chip label="Creativity" fontSize="1.2rem"/>
-                    <Chip label="Logic" fontSize="1.5rem"/>
-                    <Chip label="Problem Solving" fontSize="1.4rem"/>
-                    <Chip label="Empathy" fontSize="1.8rem"/>
-                    <Chip label="Technology" fontSize="1.2rem"/>
-                    <Chip label="Confident" fontSize="1rem"/>
-                    <Chip label="Open-Minded" fontSize="1.1rem"/>
+                    {[
+                        "Programming",
+                        "Design",
+                        "Teamwork",
+                        "Creativity",
+                        "Logic",
+                        "Problem Solving",
+                        "Empathy",
+                        "Technology",
+                        "Confident",
+                        "Open-Minded",
+                        "Friendly"
+                    ].map((skill) => (
+                        <Chip
+                            key={skill}
+                            label={skill}
+                            fontSize={"0.9rem"}
+                        />
+                    ))}
                 </div>
             </GlassCard>
         </div>
