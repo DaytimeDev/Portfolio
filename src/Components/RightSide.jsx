@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useRef, useEffect} from 'react';
 import GlassCard from "./GlassCard.jsx";
 import Chip from "./Chip.jsx";
 import projects from "../assets/projects.json";
@@ -29,26 +29,28 @@ export default function RightSide({isMobile}) {
         }
     ]
 
-
     const [selected, setSelected] = useState("Roblox");
-    const chips = ['Roblox', 'AI', 'Websites', 'Apps', "Other"];
+    const chips = ["Roblox", "AI", "Websites", "Apps", "Other"];
 
     const filteredProjects = selected
         ? projects.filter(project => project.category === selected)
         : projects;
 
+    // store per-category animation state
+    const animated = useRef({});
+
     return (
         <div style={{
             height: isMobile ? 'auto' : '90vh',
-            width: isMobile ? '90vw' : '60vw',
+            width: isMobile ? '95vw' : '60vw',
             marginTop: isMobile ? '16px' : 'auto',
             marginBottom: isMobile ? '16px' : 'auto',
-            marginRight: isMobile ? 'auto' : '20px',
             paddingTop: '0px',
+            padding: isMobile ? '0px 10px' : '20px',
         }}>
             <div style={{
                 display: 'flex',
-                flexDirection: 'row',
+                flexDirection: isMobile ? "column" : 'row',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginBottom: '16px',
@@ -88,32 +90,36 @@ export default function RightSide({isMobile}) {
             </div>
             <GlassCard>
                 {notes.filter(note => note.category === selected).map((note, idx) => {
-                    const [displayed, setDisplayed] = React.useState('');
+                    const [displayed, setDisplayed] = useState('');
 
-                    React.useEffect(() => {
-                        // Start with a string of dashes
+                    useEffect(() => {
+                        // If this category already animated, show instantly
+                        if (animated.current[note.category]) {
+                            setDisplayed(note.note);
+                            return;
+                        }
+
                         let current = '-'.repeat(note.note.length);
                         setDisplayed(current);
 
                         let i = 0;
-                        const timeout = setTimeout(() => {
-                            const interval = setInterval(() => {
-                                current =
-                                    current.slice(0, i) +
-                                    note.note[i] +
-                                    current.slice(i + 1);
+                        const interval = setInterval(() => {
+                            current =
+                                current.slice(0, i) +
+                                note.note[i] +
+                                current.slice(i + 1);
 
-                                setDisplayed(current);
-                                i++;
+                            setDisplayed(current);
+                            i++;
 
-                                if (i >= note.note.length) clearInterval(interval);
-                            }, 20); // slower speed, feels calmer
-                        }, 500); // wait 5 seconds before starting
+                            if (i >= note.note.length) {
+                                clearInterval(interval);
+                                animated.current[note.category] = true; // mark as done
+                            }
+                        }, 20);
 
-                        return () => {
-                            clearTimeout(timeout);
-                        };
-                    }, [note.note, selected]);
+                        return () => clearInterval(interval);
+                    }, [note.note, note.category]);
 
                     return (
                         <p
@@ -121,7 +127,7 @@ export default function RightSide({isMobile}) {
                             style={{
                                 margin: '8px',
                                 fontSize: isMobile ? '12px' : '14px',
-                                color: '#80ffac', // softer yellow, less eye-catching
+                                color: '#80ffac',
                                 textAlign: 'center',
                                 whiteSpace: 'pre-wrap',
                                 transition: 'color 0.3s ease',
@@ -131,14 +137,13 @@ export default function RightSide({isMobile}) {
                         </p>
                     );
                 })}
-
             </GlassCard>
             <div style={{
-                marginTop: '32px',
+                marginTop: isMobile ? "10px" : '32px',
                 display: 'grid',
                 gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr 1fr',
-                gap: '32px',
-                height: '100%',
+                gap: isMobile ? '10px' : '24px',
+                height: 'calc(100vh + 20px)',
                 overflowY: 'auto',
                 marginBottom: '0px',
             }}>
