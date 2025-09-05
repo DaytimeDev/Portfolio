@@ -51,7 +51,7 @@ export default function RightSide({isMobile}) {
             <div style={{
                 display: 'flex',
                 flexDirection: isMobile ? "column" : 'row',
-                gap: isMobile? "0" : '10px',
+                gap: isMobile? "0" : '20px',
                 alignItems: 'center',
                 justifyContent: 'center',
                 marginBottom: '16px',
@@ -60,7 +60,7 @@ export default function RightSide({isMobile}) {
                     textAlign: 'left',
                     fontSize: isMobile ? '24px' : '30px',
                     textDecoration: "underline",
-                    marginBottom: '0',
+                    marginBottom: isMobile ? "10px" : "0px",
                     backgroundColor: '#ffffff20',
                     padding: '5px',
                     borderRadius: '12px',
