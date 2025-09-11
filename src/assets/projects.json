@@ -1,7 +1,7 @@
 [
   {
     "name": "Project Blue",
-    "category": "Roblox",
+    "category": "Luau",
     "description": "A multiplayer future style game, message me to learn more!. It has car systems, weapons, cash systems and much more! This is my most recent project after many roblox programs before",
     "link": "",
     "image": "projects/Map.png",
@@ -14,12 +14,12 @@
   },
   {
     "name": "Self Driving Car",
-    "category": "Roblox",
+    "category": "Luau",
     "description": "Worked on a self driving car, which works using mathmatics and code to drive around and navigate, a work in progress.",
     "link": "",
     "image": "projects/Self.png",
     "badges": [
-      "Roblox",
+      "Luau",
       "AI",
       "Self-Driving",
       "WIP"
